@@ -35,7 +35,6 @@ def sigmoid(z):
     return 1 / (1 + np.exp(-z))
 ```
 
-
 **Derivative:**
 \[ \sigma'(z) = \sigma(z)(1 - \sigma(z)) \]
 
@@ -92,7 +91,6 @@ def relu(z):
     return np.maximum(0, z)
 ```
 
-
 **Derivative:**
 \[ \text{ReLU}'(z) = \begin{cases} 
 1 & \text{if } z > 0 \\
@@ -128,10 +126,12 @@ def leaky_relu(z, alpha=0.01):
     return np.where(z > 0, z, alpha * z)
 ```
 
-**Visualization:**
-بالتأكيد، يمكنك استخدام روابط مباشرة من الإنترنت لعرض الصور في ملف Markdown الخاص بك. إليك كيفية تعديل ملف `activation_functions.md` لإضافة الصور باستخدام روابط من Google.
+**Derivative:**
+\[ \text{Leaky ReLU}'(z) = \begin{cases} 
+1 & \text{if } z > 0 \\
+بالتأكيد، سأقوم بإنشاء ملف README جديد يحتوي على شرح مفصل لأنواع دوال التفعيل في الشبكات العصبية. سأبدأ من البداية وأضيف الشرح المفصل بدون استخدام الصور.
 
-### ملف `activation_functions.md` مع روابط صور من Google:
+### ملف `activation_functions.md`
 
 ```markdown
 # Types of Activation Functions in Neural Networks
@@ -198,6 +198,7 @@ def tanh(z):
     return np.tanh(z)
 ```
 
+**Derivative:**
 \[ \tanh'(z) = 1 - \tanh^2(z) \]
 
 ### ReLU (Rectified Linear Unit)
@@ -312,3 +313,4 @@ Choosing the right activation function is crucial for the performance of a neura
 
 - [Deep Learning Book](https://www.deeplearningbook.org/)
 - [CS231n Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/)
+
