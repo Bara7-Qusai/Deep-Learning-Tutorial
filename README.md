@@ -115,6 +115,3 @@ print('Model accuracy on test data:', test_acc)
 
 We reviewed the basics of deep learning and built a simple model using the Keras library. This model demonstrates how to implement deep learning in a real-world application and serves as a foundation for building more complex and powerful models in the future.
 
----
-
-This guide can serve as a solid starting point for your journey into deep learning. You can further develop it by adding more complex layers or applying it to different datasets. Good luck!
