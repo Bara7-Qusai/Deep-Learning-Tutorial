@@ -74,4 +74,4 @@ This function is used when the true labels are integers rather than one-hot enco
 - **Binary Classification**: Uses Binary Cross Entropy.
 - **Multi-Class Classification**: Uses Categorical Cross Entropy or Sparse Categorical Cross Entropy.
 
-Choosing the appropriate loss function significantly helps in improving the model's performance by providing an accurate measure of errors during the training process.￼Enter
+Choosing the appropriate loss function significantly helps in improving the model's performance by providing an accurate measure of errors during the training process.
