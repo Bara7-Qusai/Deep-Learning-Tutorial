@@ -35,8 +35,6 @@ def sigmoid(z):
     return 1 / (1 + np.exp(-z))
 ```
 
-**Visualization:**
-![Sigmoid Function](https://miro.medium.com/max/1400/1*AbwpW0fPPjKN9xQJq5iCdg.png)
 
 **Derivative:**
 \[ \sigma'(z) = \sigma(z)(1 - \sigma(z)) \]
@@ -66,9 +64,6 @@ def tanh(z):
     return np.tanh(z)
 ```
 
-**Visualization:**
-![Tanh Function](https://upload.wikimedia.org/wikipedia/commons/8/8c/Hyperbolic_tangent_function.png)
-
 **Derivative:**
 \[ \tanh'(z) = 1 - \tanh^2(z) \]
 
@@ -97,8 +92,6 @@ def relu(z):
     return np.maximum(0, z)
 ```
 
-**Visualization:**
-![ReLU Function](https://miro.medium.com/max/1400/1*gp4-C7Rmsezml9wCB_OXZg.png)
 
 **Derivative:**
 \[ \text{ReLU}'(z) = \begin{cases} 
@@ -177,9 +170,6 @@ def sigmoid(z):
     return 1 / (1 + np.exp(-z))
 ```
 
-**Visualization:**
-![Sigmoid Function](https://miro.medium.com/max/1400/1*AbwpW0fPPjKN9xQJq5iCdg.png)
-
 **Derivative:**
 \[ \sigma'(z) = \sigma(z)(1 - \sigma(z)) \]
 
@@ -208,10 +198,6 @@ def tanh(z):
     return np.tanh(z)
 ```
 
-**Visualization:**
-![Tanh Function](https://upload.wikimedia.org/wikipedia/commons/8/8c/Hyperbolic_tangent_function.png)
-
-**Derivative:**
 \[ \tanh'(z) = 1 - \tanh^2(z) \]
 
 ### ReLU (Rectified Linear Unit)
@@ -238,9 +224,6 @@ ReLU is the most commonly used activation function in deep learning.
 def relu(z):
     return np.maximum(0, z)
 ```
-
-**Visualization:**
-![ReLU Function](https://miro.medium.com/max/1400/1*gp4-C7Rmsezml9wCB_OXZg.png)
 
 **Derivative:**
 \[ \text{ReLU}'(z) = \begin{cases} 
@@ -277,9 +260,6 @@ def leaky_relu(z, alpha=0.01):
     return np.where(z > 0, z, alpha * z)
 ```
 
-**Visualization:**
-![Leaky ReLU Function](https://www.researchgate.net/profile/Natalie-Prost/publication/335942250/figure/fig2/AS:803553785937920@1568966640160/Leaky-ReLU-activation-function.png)
-
 **Derivative:**
 \[ \text{Leaky ReLU}'(z) = \begin{cases} 
 1 & \text{if } z > 0 \\
@@ -310,9 +290,6 @@ def softmax(z):
     exp_z = np.exp(z - np.max(z))
     return exp_z / exp_z.sum(axis=0, keepdims=True)
 ```
-
-**Visualization:**
-![Softmax Function]([https://miro.medium.com/max/720/1*Xn19FP3BMRtBI4NGpFzx7A.png](https://images.app.goo.gl/oK5GCSxJBsa6MZzB6))
 
 **Derivative:**
 \[ \frac{\partial \text{Softmax}(z_i)}{\partial z_j} = \text{Softmax}(z_i) (\delta_{ij} - \text{Softmax}(z_j)) \]
