@@ -312,7 +312,7 @@ def softmax(z):
 ```
 
 **Visualization:**
-![Softmax Function](https://miro.medium.com/max/720/1*Xn19FP3BMRtBI4NGpFzx7A.png)
+![Softmax Function]([https://miro.medium.com/max/720/1*Xn19FP3BMRtBI4NGpFzx7A.png](https://images.app.goo.gl/oK5GCSxJBsa6MZzB6))
 
 **Derivative:**
 \[ \frac{\partial \text{Softmax}(z_i)}{\partial z_j} = \text{Softmax}(z_i) (\delta_{ij} - \text{Softmax}(z_j)) \]
@@ -335,58 +335,3 @@ Choosing the right activation function is crucial for the performance of a neura
 
 - [Deep Learning Book](https://www.deeplearningbook.org/)
 - [CS231n Convolutional Neural Networks for Visual Recognition](http://cs231n.github.io/)
-
----
-
-This README provides a comprehensive overview of the most commonly used activation functions in neural networks, with visual aids to enhance understanding. For further reading and detailed implementation, refer to the references provided.
-```
-
-### ملاحظة
-
-تأكد من أن الروابط المستخدمة لصور Google أو أي مصدر آخر متاحة بشكل دائم ومرخصة للاستخدام. قد تكون بعض الروابط متغيرة أو قد يتم إزالتها من قبل المصدر الأصلي. لذلك من الأفضل، إن أمكن، رفع الصور إلى المستودع الخاص بك لضمان بقاء الروابط صال￼Enter![Leaky ReLU Function](https://www.researchgate.net/profile/Natalie-Prost/publication/335942250/figure/fig2/AS:803553785937920@1568966640160/Leaky-ReLU-activation-function.png)
-
-**Derivative:**
-\[ \text{Leaky ReLU}'(z) = \begin{cases} 
-1 & \text{if } z > 0 \\
-\alpha & \text{if } z \leq 0 
-\end{cases} \]
-
-### Softmax
-
-The softmax function is used primarily in the output layer of neural networks for classification tasks with multiple classes.
-
-**Mathematical Formula:**
-\[ \text{Softmax}(z_i) = \frac{e^{z_i}}{\sum_{j} e^{z_j}} \]
-
-**Pros:**
-- Converts logits into probabilities that sum to 1.
-
-**Cons:**
-- Computationally expensive due to the exponentiation operation.
-
-**Applications:**
-- Used in the output layer of neural networks for multi-class classification problems.
-erts the output layer's logits to a probability distribution.
-
-**Python Implementation:**
-
-```python
-def softmax(z):
-    exp_z = np.exp(z - np.max(z))
-    return exp_z / exp_z.sum(axis=0, keepdims=True)
-```
-
-**Visualization:**
-![Softmax Function](https://miro.medium.com/max/720/1*Xn19FP3BMRtBI4NGpFzx7A.png)
-
-**Derivative:**
-\[ \frac{\partial \text{Softmax}(z_i)}{\partial z_j} = \text{Softmax}(z_i) (\delta_{ij} - \text{Softmax}(z_j)) \]
-
-## Comparison of Activation Functions
-
-| Function | Range | Derivative | Pros | Cons |
-|----------|-------|------------|------|------|
-| Sigmoid  | (0, 1)| \(\sigma(z)(1 - \sigma(z))\) | Smooth gradient, probability-based output | Vanishing gradient, not zero-centered |
-| Tanh     | (-1, 1)| \(1 - \tanh^2(z)\) | Zero-centered, smooth gradient | Vanishing gradient |
-| ReLU     | [0, ∞) | 1 (z > 0), 0 (z ≤ 0) | Solves vanishing gradient, efficient | Dying ReLU problem |
-| Leaky ReLU | (-∞, ∞) | 1 (z > 0), \(\alpha\) (z ≤ 0) | Prevents dying ReLU | Small gradient for negatives |
