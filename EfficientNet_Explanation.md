@@ -59,3 +59,4 @@ Due to its high efficiency, EfficientNet can be used in various applications suc
 
 EfficientNet represents a significant advancement in the design of convolutional neural networks, offering a systematic approach to improving model performance with high efficiency. By leveraging compound scaling, MBConv blocks, and the Swish activation function, EfficientNet achieves excellent performance with substantial resource savings.
 
+
